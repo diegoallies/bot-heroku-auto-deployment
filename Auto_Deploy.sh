@@ -57,7 +57,7 @@ git remote add heroku https://git.heroku.com/"$APP_NAME".git
 
 # 7. Push changes to Heroku (Deploy the app)
 echo "Pushing code to Heroku..."
-git push heroku "$GIT_BRANCH":master
+git push heroku "$GIT_BRANCH":master --force
 
 # 8. Set all environment variables on Heroku
 echo "Setting Heroku environment variables..."
