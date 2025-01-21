@@ -15,11 +15,11 @@ validate_heroku_app_name() {
 read -p "Enter your Heroku App Name: " APP_NAME
 APP_NAME=$(echo "$APP_NAME" | tr '[:upper:]' '[:lower:]')  # Convert to lowercase
 
-# Validate Heroku app name
-validate_heroku_app_name
-
 # Inform user about Heroku naming rules
 echo "Note: Heroku app name must be lowercase and contain only letters, digits, and dashes."
+
+# Validate Heroku app name
+validate_heroku_app_name
 
 # Prompt for Heroku email
 read -p "Enter your Heroku Email: " HEROKU_EMAIL
