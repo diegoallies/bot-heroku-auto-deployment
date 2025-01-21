@@ -45,7 +45,7 @@ git commit -m "$GIT_COMMIT_MSG"
 
 # 4. Log in to Heroku (if not logged in already)
 echo "Logging in to Heroku..."
-heroku login -i
+heroku login
 
 # 5. Create a new Heroku app
 echo "Creating new Heroku app with name '$APP_NAME'..."
