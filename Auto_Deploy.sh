@@ -3,23 +3,13 @@
 # Script to Deploy to Heroku Automatically
 # Dynamically prompts the user for inputs
 
-# Function to validate Heroku app name
-validate_heroku_app_name() {
-    if [[ ! "$APP_NAME" =~ ^[a-z0-9]+(?:-[a-z0-9]+)*$ ]]; then
-        echo "Error: Heroku app name must start with a letter, end with a letter or digit, and can only contain lowercase letters, digits, and dashes."
-        exit 1
-    fi
-}
+# Inform user about Heroku naming rules
+echo "Note: Heroku app name must be lowercase and contain only letters, digits, and dashes."
+echo "Heroku app name must start with a letter, end with a letter or digit."
 
 # Prompt for Heroku app name
 read -p "Enter your Heroku App Name: " APP_NAME
 APP_NAME=$(echo "$APP_NAME" | tr '[:upper:]' '[:lower:]')  # Convert to lowercase
-
-# Inform user about Heroku naming rules
-echo "Note: Heroku app name must be lowercase and contain only letters, digits, and dashes."
-
-# Validate Heroku app name
-validate_heroku_app_name
 
 # Prompt for Heroku email
 read -p "Enter your Heroku Email: " HEROKU_EMAIL
